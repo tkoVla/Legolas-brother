@@ -20,8 +20,8 @@ int main(){
 
 srand(time(NULL));
 
-cout <<"Unesite broj duhova!\n"; cin >>duhovi; n=duhovi;
-cout <<"Unesite broj razlicitih prinosa!\n"; cin >>prinosi;
+cout <<"Enter the number of ghosts!\n"; cin >>duhovi; n=duhovi;
+cout <<"Enter the number of different offers!\n"; cin >>prinosi;
 
 for(int i=0; i<duhovi; i++)zrtva.push_back(0);
 
@@ -39,7 +39,7 @@ for(int j=0; j<3 && n>0; j++){
     for(int i=0; i<duhovi; i++){
 
         if(zrtva[i]!=target[i]){
-            cout <<"Unesite prinos za duha: "<<i+1<<endl;
+            cout <<"Enter the index for the offering to the ghost "<<i+1<<endl;
             cin >>a; zrtva[i]=a;
             pokusaj[j+1].push_back(a);
             if(zrtva[i]==target[i]){m[a]--; n--;}
@@ -69,7 +69,7 @@ for(int j=0; j<3 && n>0; j++){
     }
 }
 
-if(n==0)cout <<"Cestitamo!"<<endl;
+if(n==0)cout <<"Congrats! :D :D"<<endl;
 
 return 0;
 }
